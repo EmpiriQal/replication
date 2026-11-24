@@ -41,7 +41,7 @@ cd replication
 uv sync
 ```
 
-Installation takes under a minute.
+Installation takes under a minute on a desktop computer with an internet connection (uv downloads Python 3.12 if it is not installed).
 
 ## Demo: reproduce every number and figure
 
@@ -51,7 +51,11 @@ uv run python figures.py       # the figures, written to figures/ (about 1 minut
 uv run pytest                  # unit tests (a few seconds)
 ```
 
-Times are for the DGX Spark's CPU. `analysis.py` reads only the files in `data/` and `results/` and sends no requests. A single section runs with `uv run python analysis.py <section>`; `--list` lists them. `figures.py` stops if any plotted value differs from the paper.
+Times were measured on the DGX Spark's CPU (20 Arm cores); the demo uses no GPU and should take a few minutes on a typical desktop computer.
+
+Expected output: `analysis.py` prints about 1,170 lines, section by section, containing every number reported in the paper and its Supplementary Information; `figures.py` writes `fig1.pdf`, `fig2.pdf`, `fig3_v2.pdf`, `fig4.pdf`, `fig5.pdf`, `figS_humanset.pdf`, `figS_forecasters30.pdf` and `figS_ablation30.pdf` to `figures/`, printing each checked value; `pytest` reports 96 passed.
+
+`analysis.py` reads only the files in `data/` and `results/` and sends no requests. A single section runs with `uv run python analysis.py <section>`; `--list` lists them. `figures.py` stops if any plotted value differs from the paper.
 
 Where each section's numbers appear in the paper (S: Supplementary Information):
 
@@ -101,6 +105,8 @@ Each local model must be served at the URL given for it in `models.toml`, with t
 Generated text from the Gemini models is not exactly reproducible; the cached replies are those used in the paper.
 
 `score.py` writes per-claim CSVs and `summary.csv` to `results/` (options: `uv run python score.py --help`).
+
+To run the models on other claims, give `score.py` a CSV with the same 23 columns as `data/SCORE_replicated_claims.csv` (`--data_file`) and new cache files (`--cache_file`, `--qwen_cache_file`). The prompts use the Abstract, Claim tested and Original finding columns; AUC and accuracy use Replicated. The integrity checks in `score.load_data` are specific to the SCORE file and must be removed for other data.
 
 ## Individual human forecasts
 
