@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/
+figures/
+# outputs written by score.py, plausibility_demo.py and analysis.py
+results/*.csv

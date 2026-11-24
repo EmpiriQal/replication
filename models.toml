@@ -1,0 +1,115 @@
+# The local models. Each was served by vLLM 0.27.1 in NVIDIA's container nvcr.io/nvidia/vllm:26.08-py3 on one NVIDIA DGX Spark, with the `serve` command given here, and reached at `url` through vLLM's OpenAI-compatible interface.
+# kind: "chat" models are asked through the chat interface (score.py, chat_servers); "base" models are read from prompt log-probabilities (score.py, base_servers).
+# Change `url` to wherever the model is served.
+
+[models.qwen27]
+label = "Qwen3.8 27B"
+kind = "chat"
+model = "Qwen/Qwen3.8-27B-FP8"
+url = "http://localhost:8001/v1"
+serve = '''vllm serve Qwen/Qwen3.8-27B-FP8 --gpu-memory-utilization 0.30 --kv-cache-memory 4566612378 --max-model-len 32768 --max-num-seqs 32 --limit-mm-per-prompt '{"image": 0, "video": 0}' --reasoning-parser qwen3 --enable-sleep-mode'''
+
+[models.qwen30i]
+label = "Qwen3 30B-A3B Instruct"
+kind = "chat"
+model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
+url = "http://localhost:8016/v1"
+serve = '''vllm serve Qwen/Qwen3-30B-A3B-Instruct-2507 --gpu-memory-utilization 0.55 --kv-cache-memory 4294967296 --enable-sleep-mode --dtype bfloat16 --max-model-len 8192 --max-num-seqs 32'''
+
+[models.olmo32i]
+label = "Olmo 3.1 32B Instruct"
+kind = "chat"
+model = "allenai/Olmo-3.1-32B-Instruct"
+url = "http://localhost:8006/v1"
+serve = '''vllm serve allenai/Olmo-3.1-32B-Instruct --gpu-memory-utilization 0.60 --kv-cache-memory 6442450944 --enable-sleep-mode --dtype bfloat16 --max-model-len 8192 --max-num-seqs 32'''
+
+[models.olmo32t]
+label = "Olmo 3.1 32B Think"
+kind = "chat"
+model = "allenai/Olmo-3.1-32B-Think"
+url = "http://localhost:8007/v1"
+serve = '''vllm serve allenai/Olmo-3.1-32B-Think --gpu-memory-utilization 0.68 --kv-cache-memory 17179869184 --enable-sleep-mode --dtype bfloat16 --max-model-len 65536 --max-num-seqs 16 --reasoning-parser olmo3'''
+
+[models.olmo7i]
+label = "Olmo 3 7B Instruct"
+kind = "chat"
+model = "allenai/Olmo-3-7B-Instruct"
+url = "http://localhost:8005/v1"
+serve = '''vllm serve allenai/Olmo-3-7B-Instruct --gpu-memory-utilization 0.20 --kv-cache-memory 6442450944 --enable-sleep-mode --dtype bfloat16 --max-model-len 8192 --max-num-seqs 32'''
+
+[models.qwen08c]
+label = "Qwen3.5 0.8B"
+kind = "chat"
+model = "Qwen/Qwen3.5-0.8B"
+url = "http://localhost:8009/v1"
+serve = '''vllm serve Qwen/Qwen3.5-0.8B --gpu-memory-utilization 0.08 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --max-num-seqs 32 --limit-mm-per-prompt '{"image": 0, "video": 0}' --reasoning-parser qwen3'''
+
+[models.qwen2c]
+label = "Qwen3.5 2B"
+kind = "chat"
+model = "Qwen/Qwen3.5-2B"
+url = "http://localhost:8011/v1"
+serve = '''vllm serve Qwen/Qwen3.5-2B --gpu-memory-utilization 0.10 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --max-num-seqs 32 --limit-mm-per-prompt '{"image": 0, "video": 0}' --reasoning-parser qwen3'''
+
+[models.qwen4c]
+label = "Qwen3.5 4B"
+kind = "chat"
+model = "Qwen/Qwen3.5-4B"
+url = "http://localhost:8013/v1"
+serve = '''vllm serve Qwen/Qwen3.5-4B --gpu-memory-utilization 0.14 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --max-num-seqs 32 --limit-mm-per-prompt '{"image": 0, "video": 0}' --reasoning-parser qwen3'''
+
+[models.qwen9c]
+label = "Qwen3.5 9B"
+kind = "chat"
+model = "Qwen/Qwen3.5-9B"
+url = "http://localhost:8015/v1"
+serve = '''vllm serve Qwen/Qwen3.5-9B --gpu-memory-utilization 0.22 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --max-num-seqs 32 --limit-mm-per-prompt '{"image": 0, "video": 0}' --reasoning-parser qwen3'''
+
+[models.olmo32]
+label = "Olmo 3 32B"
+kind = "base"
+model = "allenai/Olmo-3-1125-32B"
+url = "http://localhost:8002/v1"
+serve = '''vllm serve allenai/Olmo-3-1125-32B --dtype bfloat16 --gpu-memory-utilization 0.56 --max-model-len 8192 --kv-cache-memory 2684354560 --max-num-batched-tokens 2048 --enable-sleep-mode'''
+
+[models.olmo7b]
+label = "Olmo 3 7B"
+kind = "base"
+model = "allenai/Olmo-3-1025-7B"
+url = "http://localhost:8004/v1"
+serve = '''vllm serve allenai/Olmo-3-1025-7B --gpu-memory-utilization 0.20 --kv-cache-memory 6442450944 --enable-sleep-mode --dtype bfloat16 --max-model-len 8192 --max-num-batched-tokens 2048'''
+
+[models.qwen08b]
+label = "Qwen3.5 0.8B Base"
+kind = "base"
+model = "Qwen/Qwen3.5-0.8B-Base"
+url = "http://localhost:8008/v1"
+serve = '''vllm serve Qwen/Qwen3.5-0.8B-Base --gpu-memory-utilization 0.08 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --limit-mm-per-prompt '{"image": 0, "video": 0}''''
+
+[models.qwen2b]
+label = "Qwen3.5 2B Base"
+kind = "base"
+model = "Qwen/Qwen3.5-2B-Base"
+url = "http://localhost:8010/v1"
+serve = '''vllm serve Qwen/Qwen3.5-2B-Base --gpu-memory-utilization 0.10 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --limit-mm-per-prompt '{"image": 0, "video": 0}''''
+
+[models.qwen4b]
+label = "Qwen3.5 4B Base"
+kind = "base"
+model = "Qwen/Qwen3.5-4B-Base"
+url = "http://localhost:8012/v1"
+serve = '''vllm serve Qwen/Qwen3.5-4B-Base --gpu-memory-utilization 0.14 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --max-num-seqs 64 --limit-mm-per-prompt '{"image": 0, "video": 0}''''
+
+[models.qwen9b]
+label = "Qwen3.5 9B Base"
+kind = "base"
+model = "Qwen/Qwen3.5-9B-Base"
+url = "http://localhost:8014/v1"
+serve = '''vllm serve Qwen/Qwen3.5-9B-Base --gpu-memory-utilization 0.22 --kv-cache-memory 4294967296 --enable-sleep-mode --max-model-len 8192 --max-num-seqs 64 --limit-mm-per-prompt '{"image": 0, "video": 0}''''
+
+[models.qwen30b]
+label = "Qwen3 30B-A3B Base"
+kind = "base"
+model = "Qwen/Qwen3-30B-A3B-Base"
+url = "http://localhost:8017/v1"
+serve = '''vllm serve Qwen/Qwen3-30B-A3B-Base --gpu-memory-utilization 0.55 --kv-cache-memory 4294967296 --enable-sleep-mode --dtype bfloat16 --max-model-len 8192 --max-num-seqs 64'''

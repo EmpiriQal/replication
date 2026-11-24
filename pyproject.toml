@@ -1,0 +1,25 @@
+[project]
+name = "replication"
+version = "1.0.0"
+description = "Code, model outputs and analyses for \"Large language models predict which studies replicate by pattern recognition\""
+requires-python = "==3.12.*"
+dependencies = [
+  "google-genai>=3.3.0",
+  "httpx",
+  "matplotlib>=3.11.2",
+  "numpy",
+  "openai",
+  "pandas>=3.1.0",
+  "pyreadr>=0.5.9",
+  "scipy>=1.18.1",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,46 @@
+Requesting 27 Qwen responses from qwen27 with a 32000-token reasoning cap (4 at a time)...
+  1/27 after 23.6 min: row 121, 10619 tokens, answer no 10
+  2/27 after 25.8 min: row 16, 11622 tokens, answer no 20
+  3/27 after 35.5 min: row 30, 15865 tokens, answer yes 80
+  4/27 after 64.8 min: row 125, 18078 tokens, answer no 10
+  5/27 after 72.8 min: row 56, 32010 tokens, answer no 35
+  6/27 after 96.5 min: row 186, 17928 tokens, answer yes 70, forced
+  7/27 after 96.5 min: row 162, 28917 tokens, answer no 20
+  8/27 after 115.1 min: row 189, 21683 tokens, answer yes 70
+  9/27 after 117.2 min: row 196, 16488 tokens, answer no 20
+  10/27 after 127.2 min: row 202, 13508 tokens, answer yes 80
+  11/27 after 134.0 min: row 200, 16540 tokens, answer no 20
+  12/27 after 149.1 min: row 204, 15060 tokens, answer no 10
+  13/27 after 160.9 min: row 205, 19235 tokens, answer no 20
+  14/27 after 174.5 min: row 212, 17665 tokens, answer no 30
+  15/27 after 183.1 min: row 214, 14664 tokens, answer no 30
+  16/27 after 191.6 min: row 206, 28027 tokens, answer yes 70
+  17/27 after 199.7 min: row 216, 16790 tokens, answer yes 65
+  18/27 after 204.6 min: row 228, 13165 tokens, answer no 30
+  19/27 after 223.9 min: row 237, 17978 tokens, answer yes 60
+  20/27 after 230.4 min: row 239, 17117 tokens, answer yes 60
+  21/27 after 234.7 min: row 243, 15474 tokens, answer no 30
+  22/27 after 249.7 min: row 260, 11388 tokens, answer yes 85
+  23/27 after 252.6 min: row 266, 7856 tokens, answer yes 85, forced, stuck
+  24/27 after 277.6 min: row 262, 16247 tokens, answer no 25, forced
+  25/27 after 277.7 min: row 256, 32010 tokens, answer yes 85
+  26/27 after 282.1 min: row 274, 12295 tokens, answer yes 80
+  27/27 after 291.6 min: row 271, 18500 tokens, answer yes 85
+
+57 rows: 27 from the 32k run, 30 finished within 16k
+hit 32k cap 0, forced 3, stuck 1, no answer 0
+completion tokens: median 14044, max 32010
+
+High-power, with original finding: weighted AUC (stated, token), yes answers, accuracy
+  all (n=57)
+    thinking off  stated 0.628  token 0.834  yes  2  acc 0.596  near certain 0.02
+    thinking 4k   stated 0.701  token 0.777  yes 19  acc 0.684  near certain 0.18
+    thinking 32k  stated 0.771  token 0.743  yes 33  acc 0.684  near certain 0.96
+    replicats     0.731  acc 0.632
+    markets       0.723  acc 0.684
+  excluding capped, forced or stuck (n=54)
+    thinking off  stated 0.636  token 0.848  yes  2  acc 0.593  near certain 0.02
+    thinking 4k   stated 0.691  token 0.776  yes 19  acc 0.685  near certain 0.17
+    thinking 32k  stated 0.784  token 0.724  yes 31  acc 0.685  near certain 0.98
+    replicats     0.733  acc 0.630
+    markets       0.749  acc 0.722

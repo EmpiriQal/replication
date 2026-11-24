@@ -1,0 +1,8 @@
+{
+ "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "question": "What did the SCORE project's Nature paper by Tyner et al., \"Investigating the replicability of the social and behavioural sciences\", find? Give the main numbers if you know them, and say so if you do not know this paper.",
+ "thinking": "off",
+ "temperature": 0,
+ "max_tokens": 600,
+ "answer": "I do not have access to the specific content of the Nature paper by Tyner et al. titled \"Investigating the replicability of the social and behavioural sciences\" from the SCORE project. Therefore, I cannot provide the main findings or numbers from that paper with certainty. If you need accurate details, I recommend consulting the original paper published in *Nature* or accessing it through a scholarly database like PubMed, Nature.com, or your institution\u2019s library."
+}

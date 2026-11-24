@@ -1,0 +1,269 @@
+=== base 14:40:58
+predictor  server   subset     data_type  template               mode    olmo_ending  n_rows  n_papers  sum_weights  weighted_auc  fitted_offset  weighted_accuracy
+base       olmo7b   all        all        with_original_finding  fitted  yes_no       274     164       164.000000   0.582675      0.546875       0.570884
+base       olmo7b   all        all        with_original_finding  loo     yes_no       274     164       164.000000   0.582675                     0.570884
+base       olmo7b   human      all        with_original_finding  fitted  yes_no       135     135       135.000000   0.585200      0.515625       0.577778
+base       olmo7b   human      all        with_original_finding  loo     yes_no       135     135       135.000000   0.585200                     0.540741
+base       olmo7b   highpower  all        with_original_finding  fitted  yes_no       57      57        57.000000    0.676250      0.421875       0.666667
+base       olmo7b   highpower  all        with_original_finding  loo     yes_no       57      57        57.000000    0.676250                     0.526316
+base       qwen08b  all        all        with_original_finding  fitted  yes_no       274     164       164.000000   0.561595      -0.750379      0.589499
+base       qwen08b  all        all        with_original_finding  loo     yes_no       274     164       164.000000   0.561595                     0.552913
+base       qwen08b  human      all        with_original_finding  fitted  yes_no       135     135       135.000000   0.562692      -0.797157      0.607407
+base       qwen08b  human      all        with_original_finding  loo     yes_no       135     135       135.000000   0.562692                     0.607407
+base       qwen08b  highpower  all        with_original_finding  fitted  yes_no       57      57        57.000000    0.555625      -0.810868      0.649123
+base       qwen08b  highpower  all        with_original_finding  loo     yes_no       57      57        57.000000    0.555625                     0.649123
+base       qwen2b   all        all        with_original_finding  fitted  yes_no       274     164       164.000000   0.502056      0.250151       0.522747
+base       qwen2b   all        all        with_original_finding  loo     yes_no       274     164       164.000000   0.502056                     0.406131
+base       qwen2b   human      all        with_original_finding  fitted  yes_no       135     135       135.000000   0.512956      -0.000406      0.533333
+base       qwen2b   human      all        with_original_finding  loo     yes_no       135     135       135.000000   0.512956                     0.503704
+base       qwen2b   highpower  all        with_original_finding  fitted  yes_no       57      57        57.000000    0.520000      -0.000077      0.631579
+base       qwen2b   highpower  all        with_original_finding  loo     yes_no       57      57        57.000000    0.520000                     0.596491
+base       qwen4b   all        all        with_original_finding  fitted  yes_no       274     164       164.000000   0.595978      1.249309       0.587212
+base       qwen4b   all        all        with_original_finding  loo     yes_no       274     164       164.000000   0.595978                     0.481318
+base       qwen4b   human      all        with_original_finding  fitted  yes_no       135     135       135.000000   0.571256      1.250602       0.570370
+base       qwen4b   human      all        with_original_finding  loo     yes_no       135     135       135.000000   0.571256                     0.437037
+base       qwen4b   highpower  all        with_original_finding  fitted  yes_no       57      57        57.000000    0.661250      1.125022       0.631579
+base       qwen4b   highpower  all        with_original_finding  loo     yes_no       57      57        57.000000    0.661250                     0.438596
+base       qwen9b   all        all        with_original_finding  fitted  yes_no       274     164       164.000000   0.619288      1.215004       0.629726
+base       qwen9b   all        all        with_original_finding  loo     yes_no       274     164       164.000000   0.619288                     0.629726
+base       qwen9b   human      all        with_original_finding  fitted  yes_no       135     135       135.000000   0.637242      0.983203       0.622222
+base       qwen9b   human      all        with_original_finding  loo     yes_no       135     135       135.000000   0.637242                     0.614815
+base       qwen9b   highpower  all        with_original_finding  fitted  yes_no       57      57        57.000000    0.751875      1.214765       0.701754
+base       qwen9b   highpower  all        with_original_finding  loo     yes_no       57      57        57.000000    0.751875                     0.561404
+
+30 runs written to results/new_base
+=== chat 14:40:58
+274 of 274 prompts have no cached response from olmo7i; bringing it up if needed...
+Requesting 274 responses from olmo7i (64 at a time)...
+  10/274 after 0.1 min (189.9 per min)
+  20/274 after 0.1 min (306.4 per min)
+  30/274 after 0.1 min (351.6 per min)
+  40/274 after 0.1 min (442.8 per min)
+  50/274 after 0.1 min (526.0 per min)
+  60/274 after 0.1 min (562.9 per min)
+  70/274 after 0.1 min (584.7 per min)
+  80/274 after 0.1 min (625.4 per min)
+  90/274 after 0.1 min (659.1 per min)
+  100/274 after 0.2 min (644.6 per min)
+  110/274 after 0.2 min (659.5 per min)
+  120/274 after 0.2 min (695.6 per min)
+  130/274 after 0.2 min (693.3 per min)
+  140/274 after 0.2 min (717.8 per min)
+  150/274 after 0.2 min (742.8 per min)
+  160/274 after 0.2 min (704.6 per min)
+  170/274 after 0.2 min (708.5 per min)
+  180/274 after 0.2 min (734.0 per min)
+  190/274 after 0.3 min (697.4 per min)
+  200/274 after 0.3 min (720.5 per min)
+  210/274 after 0.3 min (708.1 per min)
+  220/274 after 0.3 min (691.2 per min)
+  230/274 after 0.3 min (698.2 per min)
+  240/274 after 0.3 min (701.5 per min)
+  250/274 after 0.4 min (697.4 per min)
+  260/274 after 0.4 min (719.3 per min)
+  270/274 after 0.4 min (739.5 per min)
+  274/274 after 0.4 min (750.2 per min)
+274 of 274 prompts have no cached response from olmo32i; bringing it up if needed...
+Requesting 274 responses from olmo32i (64 at a time)...
+  10/274 after 0.2 min (46.1 per min)
+  20/274 after 0.3 min (77.9 per min)
+  30/274 after 0.3 min (102.0 per min)
+  40/274 after 0.4 min (109.3 per min)
+  50/274 after 0.4 min (127.2 per min)
+  60/274 after 0.4 min (135.7 per min)
+  70/274 after 0.5 min (142.4 per min)
+  80/274 after 0.5 min (155.9 per min)
+  90/274 after 0.5 min (166.0 per min)
+  100/274 after 0.6 min (155.9 per min)
+  110/274 after 0.7 min (161.7 per min)
+  120/274 after 0.7 min (171.9 per min)
+  130/274 after 0.8 min (170.4 per min)
+  140/274 after 0.8 min (174.6 per min)
+  150/274 after 0.8 min (177.9 per min)
+  160/274 after 0.9 min (178.3 per min)
+  170/274 after 1.0 min (173.0 per min)
+  180/274 after 1.0 min (180.1 per min)
+  190/274 after 1.1 min (179.5 per min)
+  200/274 after 1.2 min (171.8 per min)
+  210/274 after 1.2 min (170.9 per min)
+  220/274 after 1.3 min (172.5 per min)
+  230/274 after 1.3 min (171.3 per min)
+  240/274 after 1.4 min (172.8 per min)
+  250/274 after 1.4 min (173.7 per min)
+  260/274 after 1.5 min (177.3 per min)
+  270/274 after 1.5 min (182.4 per min)
+  274/274 after 1.5 min (184.5 per min)
+274 of 274 prompts have no cached response from qwen08c; bringing it up if needed...
+Requesting 274 responses from qwen08c (64 at a time)...
+  10/274 after 0.0 min (376.6 per min)
+  20/274 after 0.0 min (688.7 per min)
+  30/274 after 0.0 min (939.9 per min)
+  40/274 after 0.0 min (1100.7 per min)
+  50/274 after 0.0 min (1277.4 per min)
+  60/274 after 0.0 min (1389.7 per min)
+  70/274 after 0.0 min (1442.1 per min)
+  80/274 after 0.0 min (1607.1 per min)
+  90/274 after 0.1 min (1725.7 per min)
+  100/274 after 0.1 min (1772.8 per min)
+  110/274 after 0.1 min (1843.1 per min)
+  120/274 after 0.1 min (1923.1 per min)
+  130/274 after 0.1 min (1959.9 per min)
+  140/274 after 0.1 min (2015.7 per min)
+  150/274 after 0.1 min (2097.7 per min)
+  160/274 after 0.1 min (2118.8 per min)
+  170/274 after 0.1 min (2179.8 per min)
+  180/274 after 0.1 min (2222.3 per min)
+  190/274 after 0.1 min (2241.2 per min)
+  200/274 after 0.1 min (2282.2 per min)
+  210/274 after 0.1 min (2316.0 per min)
+  220/274 after 0.1 min (2342.8 per min)
+  230/274 after 0.1 min (2383.8 per min)
+  240/274 after 0.1 min (2404.1 per min)
+  250/274 after 0.1 min (2451.1 per min)
+  260/274 after 0.1 min (2537.7 per min)
+  270/274 after 0.1 min (2616.2 per min)
+  274/274 after 0.1 min (2647.3 per min)
+274 of 274 prompts have no cached response from qwen2c; bringing it up if needed...
+Requesting 274 responses from qwen2c (64 at a time)...
+  10/274 after 0.0 min (341.5 per min)
+  20/274 after 0.0 min (604.9 per min)
+  30/274 after 0.0 min (771.8 per min)
+  40/274 after 0.0 min (874.6 per min)
+  50/274 after 0.1 min (977.4 per min)
+  60/274 after 0.1 min (1083.2 per min)
+  70/274 after 0.1 min (1124.4 per min)
+  80/274 after 0.1 min (1215.6 per min)
+  90/274 after 0.1 min (1266.6 per min)
+  100/274 after 0.1 min (1286.6 per min)
+  110/274 after 0.1 min (1336.8 per min)
+  120/274 after 0.1 min (1372.3 per min)
+  130/274 after 0.1 min (1374.1 per min)
+  140/274 after 0.1 min (1441.0 per min)
+  150/274 after 0.1 min (1457.3 per min)
+  160/274 after 0.1 min (1475.9 per min)
+  170/274 after 0.1 min (1485.1 per min)
+  180/274 after 0.1 min (1517.9 per min)
+  190/274 after 0.1 min (1555.1 per min)
+  200/274 after 0.1 min (1532.6 per min)
+  210/274 after 0.1 min (1564.6 per min)
+  220/274 after 0.1 min (1602.4 per min)
+  230/274 after 0.1 min (1600.6 per min)
+  240/274 after 0.1 min (1619.2 per min)
+  250/274 after 0.2 min (1648.3 per min)
+  260/274 after 0.2 min (1697.7 per min)
+  270/274 after 0.2 min (1739.7 per min)
+  274/274 after 0.2 min (1764.5 per min)
+274 of 274 prompts have no cached response from qwen4c; bringing it up if needed...
+Requesting 274 responses from qwen4c (64 at a time)...
+  10/274 after 0.1 min (180.6 per min)
+  20/274 after 0.1 min (303.7 per min)
+  30/274 after 0.1 min (392.6 per min)
+  40/274 after 0.1 min (417.0 per min)
+  50/274 after 0.1 min (472.2 per min)
+  60/274 after 0.1 min (515.7 per min)
+  70/274 after 0.1 min (519.1 per min)
+  80/274 after 0.1 min (552.6 per min)
+  90/274 after 0.2 min (585.5 per min)
+  100/274 after 0.2 min (580.7 per min)
+  110/274 after 0.2 min (592.7 per min)
+  120/274 after 0.2 min (610.3 per min)
+  130/274 after 0.2 min (622.2 per min)
+  140/274 after 0.2 min (638.4 per min)
+  150/274 after 0.2 min (656.6 per min)
+  160/274 after 0.2 min (655.3 per min)
+  170/274 after 0.3 min (654.4 per min)
+  180/274 after 0.3 min (667.5 per min)
+  190/274 after 0.3 min (678.5 per min)
+  200/274 after 0.3 min (672.4 per min)
+  210/274 after 0.3 min (686.0 per min)
+  220/274 after 0.3 min (702.5 per min)
+  230/274 after 0.3 min (692.7 per min)
+  240/274 after 0.3 min (703.4 per min)
+  250/274 after 0.3 min (718.0 per min)
+  260/274 after 0.4 min (741.5 per min)
+  270/274 after 0.4 min (762.1 per min)
+  274/274 after 0.4 min (772.1 per min)
+274 of 274 prompts have no cached response from qwen9c; bringing it up if needed...
+Requesting 274 responses from qwen9c (64 at a time)...
+  10/274 after 0.1 min (120.5 per min)
+  20/274 after 0.1 min (201.4 per min)
+  30/274 after 0.1 min (256.8 per min)
+  40/274 after 0.1 min (270.6 per min)
+  50/274 after 0.2 min (303.1 per min)
+  60/274 after 0.2 min (329.2 per min)
+  70/274 after 0.2 min (326.2 per min)
+  80/274 after 0.2 min (345.0 per min)
+  90/274 after 0.2 min (369.0 per min)
+  100/274 after 0.3 min (362.5 per min)
+  110/274 after 0.3 min (371.4 per min)
+  120/274 after 0.3 min (386.4 per min)
+  130/274 after 0.3 min (382.1 per min)
+  140/274 after 0.4 min (398.0 per min)
+  150/274 after 0.4 min (395.6 per min)
+  160/274 after 0.4 min (405.6 per min)
+  170/274 after 0.4 min (404.8 per min)
+  180/274 after 0.4 min (409.8 per min)
+  190/274 after 0.5 min (413.2 per min)
+  200/274 after 0.5 min (415.0 per min)
+  210/274 after 0.5 min (424.6 per min)
+  220/274 after 0.5 min (429.7 per min)
+  230/274 after 0.5 min (430.4 per min)
+  240/274 after 0.6 min (434.7 per min)
+  250/274 after 0.6 min (444.1 per min)
+  260/274 after 0.6 min (457.2 per min)
+  270/274 after 0.6 min (470.3 per min)
+  274/274 after 0.6 min (476.4 per min)
+predictor  server   subset     data_type  template               thinking  qwen_score  human_accuracy  n_rows  n_papers  sum_weights  weighted_auc  weighted_accuracy
+chat       olmo7i   all        all        with_original_finding  off       stated      threshold       274     164       164.000000   0.509472      0.501389
+chat       olmo7i   all        all        with_original_finding  off       token       threshold       274     164       164.000000   0.537341      0.501389
+chat       olmo7i   human      all        with_original_finding  off       stated      threshold       135     135       135.000000   0.512956      0.496296
+chat       olmo7i   human      all        with_original_finding  off       token       threshold       135     135       135.000000   0.558849      0.496296
+chat       olmo7i   highpower  all        with_original_finding  off       stated      threshold       57      57        57.000000    0.590625      0.596491
+chat       olmo7i   highpower  all        with_original_finding  off       token       threshold       57      57        57.000000    0.592500      0.596491
+chat       olmo32i  all        all        with_original_finding  off       stated      threshold       274     164       164.000000   0.547253      0.513432
+chat       olmo32i  all        all        with_original_finding  off       token       threshold       274     164       164.000000   0.587027      0.513432
+chat       olmo32i  human      all        with_original_finding  off       stated      threshold       135     135       135.000000   0.554128      0.518519
+chat       olmo32i  human      all        with_original_finding  off       token       threshold       135     135       135.000000   0.566315      0.518519
+chat       olmo32i  highpower  all        with_original_finding  off       stated      threshold       57      57        57.000000    0.575000      0.561404
+chat       olmo32i  highpower  all        with_original_finding  off       token       threshold       57      57        57.000000    0.760000      0.561404
+chat       qwen08c  all        all        with_original_finding  off       stated      threshold       274     164       164.000000   0.549982      0.526762
+chat       qwen08c  all        all        with_original_finding  off       token       threshold       274     164       164.000000   0.499515      0.526762
+chat       qwen08c  human      all        with_original_finding  off       stated      threshold       135     135       135.000000   0.526899      0.518519
+chat       qwen08c  human      all        with_original_finding  off       token       threshold       135     135       135.000000   0.512297      0.518519
+chat       qwen08c  highpower  all        with_original_finding  off       stated      threshold       57      57        57.000000    0.569375      0.473684
+chat       qwen08c  highpower  all        with_original_finding  off       token       threshold       57      57        57.000000    0.476875      0.473684
+chat       qwen2c   all        all        with_original_finding  off       stated      threshold       274     164       164.000000   0.534671      0.491751
+chat       qwen2c   all        all        with_original_finding  off       token       threshold       274     164       164.000000   0.500124      0.491751
+chat       qwen2c   human      all        with_original_finding  off       stated      threshold       135     135       135.000000   0.531291      0.481481
+chat       qwen2c   human      all        with_original_finding  off       token       threshold       135     135       135.000000   0.539526      0.481481
+chat       qwen2c   highpower  all        with_original_finding  off       stated      threshold       57      57        57.000000    0.623750      0.421053
+chat       qwen2c   highpower  all        with_original_finding  off       token       threshold       57      57        57.000000    0.479375      0.421053
+chat       qwen4c   all        all        with_original_finding  off       stated      threshold       274     164       164.000000   0.519047      0.514651
+chat       qwen4c   all        all        with_original_finding  off       token       threshold       274     164       164.000000   0.537373      0.514651
+chat       qwen4c   human      all        with_original_finding  off       stated      threshold       135     135       135.000000   0.516469      0.518519
+chat       qwen4c   human      all        with_original_finding  off       token       threshold       135     135       135.000000   0.524923      0.518519
+chat       qwen4c   highpower  all        with_original_finding  off       stated      threshold       57      57        57.000000    0.452500      0.561404
+chat       qwen4c   highpower  all        with_original_finding  off       token       threshold       57      57        57.000000    0.603750      0.561404
+chat       qwen9c   all        all        with_original_finding  off       stated      threshold       274     164       164.000000   0.516839      0.521968
+chat       qwen9c   all        all        with_original_finding  off       token       threshold       274     164       164.000000   0.622709      0.521968
+chat       qwen9c   human      all        with_original_finding  off       stated      threshold       135     135       135.000000   0.520531      0.525926
+chat       qwen9c   human      all        with_original_finding  off       token       threshold       135     135       135.000000   0.659640      0.525926
+chat       qwen9c   highpower  all        with_original_finding  off       stated      threshold       57      57        57.000000    0.540000      0.561404
+chat       qwen9c   highpower  all        with_original_finding  off       token       threshold       57      57        57.000000    0.771875      0.561404
+
+36 runs written to results/new_chat
+=== think 14:54:14
+57 of 57 prompts have no cached response from olmo32t; bringing it up if needed...
+Requesting 57 responses from olmo32t (12 at a time)...
+  10/57 after 34.5 min (0.3 per min)
+  20/57 after 62.0 min (0.3 per min)
+  30/57 after 95.5 min (0.3 per min)
+  40/57 after 113.5 min (0.4 per min)
+  50/57 after 139.6 min (0.4 per min)
+  57/57 after 157.4 min (0.4 per min)
+predictor  server   subset     data_type  template               thinking  qwen_score  human_accuracy  n_rows  n_papers  sum_weights  weighted_auc  weighted_accuracy
+chat       olmo32t  highpower  all        with_original_finding  on        stated      threshold       57      57        57.000000    0.713125      0.666667
+chat       olmo32t  highpower  all        with_original_finding  on        token       threshold       57      57        57.000000    0.756875      0.666667
+
+2 runs written to results/new_think
+=== all done 17:36:21
