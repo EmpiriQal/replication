@@ -1,0 +1,8 @@
+{
+  "title": "Code, model outputs and analyses for \"Large language models predict which studies replicate by pattern recognition\"",
+  "upload_type": "software",
+  "description": "Code that asked language models whether each of the 274 SCORE replications succeeded, every model output used in the paper, and code that recomputes every number and figure in the paper and its Supplementary Information from those outputs.",
+  "creators": [{"name": "Love, Bradley C.", "affiliation": "EmpiriQal, Inc."}],
+  "license": "MIT",
+  "keywords": ["replication", "reproducibility", "large language models", "forecasting", "SCORE"]
+}
